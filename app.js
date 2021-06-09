@@ -1017,5 +1017,5 @@ client.once('ready', () => {
 })
 
 //Last Name
-token = require('./token.json')
-client.login(token[0]);
+const TOKEN = require('./token.json')[0]
+client.login(TOKEN);
