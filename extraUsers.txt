@@ -1,0 +1,50 @@
+{
+  "all-users-id": [
+    "718824023924015105",
+    "754315230414372904",
+    "792169537457356830",
+    "754315230414372904"
+  ],
+  "718824023924015105": {
+    "id": "718824023924015105",
+    "coins": 92386,
+    "streak": 105,
+    "level": 33,
+    "reqxp": 21780,
+    "currentxp": 10720,
+    "xpBooster": 50,
+    "moneyBooster": 4.5,
+    "boostersBought": 3,
+    "cd": {
+      "ask": 0
+    }
+  },
+  "792169537457356830": {
+    "id": "792169537457356830",
+    "coins": 819,
+    "streak": 8,
+    "level": 4,
+    "reqxp": 320,
+    "currentxp": 34,
+    "xpBooster": 1,
+    "moneyBooster": 1.5,
+    "boostersBought": 1,
+    "cd": {
+      "ask": 4
+    }
+  },
+  "754315230414372904": {
+    "id": "754315230414372904",
+    "coins": 229621,
+    "streak": 22,
+    "level": 63,
+    "reqxp": 79380,
+    "currentxp": 63400,
+    "xpBooster": 50,
+    "moneyBooster": 11.5,
+    "boostersBought": 9,
+    "cd": {
+      "ask": 0
+    }
+  }
+}

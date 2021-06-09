@@ -1,0 +1,62 @@
+[
+{
+    "q": "What is the most common name in the world",
+    "rightAnswer": "Mohammed",
+    "choices": ["Adam", "Alex", "Aaron", "Ben", "Carl", "Dan", "David", "Edward", "Fred", "Frank", "George", "Hal", "Hank", "Ike", "John", "Jack", "Joe", "Larry", "Monte", "Matthew", "Mark", "Nathan", "Otto", "Paul", "Peter", "Roger", "Roger", "Steve", "Thomas", "Tim", "Ty", "Victor", "Walter"]
+},
+{
+    "q": "What currency has the highest value",
+    "rightAnswer": "Kuwaiti Dinar",
+    "choices": ["US Dollar", "British Pound", "Chinese Yuan", "Indian Rupees", "Japanese Yen", "Australian Dollar", "Bahrain Dinar", "UAE Dirham", "Russian Ruble"]
+},
+{
+    "q": "Which is the Tallest building in the world",
+    "rightAnswer": "Burj Khalifa",
+    "choices": ["Empire State Buiding", "Twin Towers", "Taipei 101", "Shanghai Tower", "One World Trade Center", "Makkah Royal Clock Tower", "Eiffel Tower"]
+},
+{
+    "q": "Who discovered America",
+    "rightAnswer": "Christopher Columbus",
+    "choices": ["Vasco da Gama", "James Cook", "John Cabot", "Marco Polo", "Francis Drake", "Hernan Cortes"] 
+},
+{
+    "q": "Who discovered India",
+    "rightAnswer": "Vasco da Gama",
+    "choices": ["Christopher Columbus", "James Cook", "John Cabot", "Marco Polo", "Francis Drake", "Hernan Cortes"] 
+},
+{
+    "q": "Which Year did the First World War start",
+    "rightAnswer": "1914",
+    "choices": [1916, 1918, 1939, 1945, 1947, 1718, 1899, 1920]
+},
+{
+    "q": "Which Year did the Second World War start",
+    "rightAnswer": "1939",
+    "choices": [1916, 1918, 1914, 1945, 1947, 1718, 1899, 1920]
+},
+{
+    "q": "Which is the largest empire by area",
+    "rightAnswer": "British Empire",
+    "choices": ["The Mongol Empire", "The French Empire", "The Portuguese Empire", "The Ottoman Empire", "The Mughal Empire", "The Maratha Empire", "Qin Dynasty"]
+},
+{
+    "q": "Which country has the highest GDP",
+    "rightAnswer": "USA",
+    "choices": ["India", "China", "Japan", "Russia", "UK", "France", "Germany", "Italy", "Australia", "Canada"]
+},
+{
+    "q": "Which Country won the 2015 Cricket World Cup",
+    "rightAnswer": "Australia",
+    "choices": ["India", "England", "Pakistan", "New Zealand", "Sri Lanka", "Bangladesh"]
+},
+{
+    "q": "Which Country won the 2011 Cricket World Cup",
+    "rightAnswer": "India",
+    "choices": ["Australia", "England", "Pakistan", "New Zealand", "Sri Lanka", "Bangladesh"]
+},
+{
+    "q": "Which Country won the 2019 Cricket World Cup",
+    "rightAnswer": "England",
+    "choices": ["Australia", "India", "Pakistan", "New Zealand", "Sri Lanka", "Bangladesh"]
+}
+]
