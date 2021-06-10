@@ -6,6 +6,22 @@ To do list:
  in 1000 increments, or battle questions to see who can answer fastest
 
 ###`
+
+const AutoGitUpdate = require('auto-git-update');
+
+const config = {
+    repository: 'https://github.com/shabbusaifee/The-GK-Bot',
+    tempLocation: 'E:\\Coding Files\\dicord projects\\spamming bot\\templocation',
+    ignoreFiles: ['./.env', './node_modules'],
+    executeOnComplete: 'E:\\Coding Files\\dicord projects\\spamming bot\\execution',
+    exitOnComplete: true
+}
+
+const express = require('express');
+const app = express();
+
+const updater = new AutoGitUpdate(config);
+
 require('dotenv').config()
 const Discord = require('discord.js');
 const client = new Discord.Client();
@@ -35,6 +51,7 @@ let started = false;
 let spamNumber = 1;
 
 let prefixJson = require("./prefix.json");
+const { exception } = require('console');
 let prefix = prefixJson["default"].prefix;
 console.log(prefix)
 let messageId = [];
@@ -49,6 +66,7 @@ function askCD(id){
                     clearInterval(ourCode)
                 }
             }, 1000)
+            updater.autoUpdate();
 }
 
 client.on('message', (message) => {
@@ -77,7 +95,7 @@ client.on('message', (message) => {
     }else{
         prefix = prefixJson[serverID].prefix;
     }
-
+updater.autoUpdate();
     if (!message.content.startsWith(prefix) || message.author.bot) return;
 
     for (i=0;i<users['all-users-id'].length;i++){
@@ -119,6 +137,7 @@ client.on('message', (message) => {
                 fs.writeFile('./users.json', JSON.stringify(users, null, 2), err=>{
                     console.log(err)
                 })
+                updater.autoUpdate();
                 message.channel.send("Profile successfully created, check profile using " + 
                 prefix+ "profile") 
             }
@@ -156,6 +175,7 @@ client.on('message', (message) => {
             fs.writeFile('./prefix.json', JSON.stringify(prefixJson, null, 2), err=>{
                 if(err) message.channel.send("An error has occured, please try again in a few seconds")
             })
+            updater.autoUpdate();
             message.channel.send("prefix changed to "+prefix)
         }else{
             message.channel.send(`The prefix command requires a prefix arguement, example: ${prefix}prefix .`)
@@ -261,6 +281,7 @@ client.on('message', (message) => {
                 fs.writeFile('./users.json', JSON.stringify(users, null, 2), err=>{
                     if(err)console.log(err);
                 })
+                updater.autoUpdate();
 
                 askCD(authorID);
 
@@ -574,6 +595,7 @@ client.on('messageReactionAdd', (messageReaction, user) => {
             fs.writeFile('./users.json', JSON.stringify(users, null, 2), err=>{
                 if(err)console.log(err);
             })
+            updater.autoUpdate();
             message.edit(rightEmbed)
         }
     }
@@ -588,6 +610,7 @@ client.on('messageReactionAdd', (messageReaction, user) => {
             fs.writeFile('./users.json', JSON.stringify(users, null, 2), err=>{
                 if(err)console.log(err);
             })
+            updater.autoUpdate();
         }
     }}
 
@@ -623,6 +646,7 @@ client.on("messageReactionAdd", (messageReaction, user)=>{
                 fs.writeFile('./users.json', JSON.stringify(users, null, 2), (err)=>{
                     if(err)console.log(err);
                 })
+                updater.autoUpdate();
             }else{
             message.channel.send(`You do not have enough coins, You need ${boosterPrice* (users[authorID].boostersBought*3) - users[authorID].coins} more coins`)
         }
@@ -649,6 +673,7 @@ client.on("messageReactionAdd", (messageReaction, user)=>{
                 fs.writeFile('./users.json', JSON.stringify(users, null, 2), (err)=>{
                     if(err)console.log(err);
                 })
+                updater.autoUpdate();
             }else{
             message.channel.send(`You do not have enough coins, You need ${boosterPrice* (users[authorID].boostersBought*3) - users[authorID].coins} more coins`)
         }
@@ -675,6 +700,7 @@ client.on("messageReactionAdd", (messageReaction, user)=>{
                 fs.writeFile('./users.json', JSON.stringify(users, null, 2), (err)=>{
                     if(err)console.log(err);
                 })
+                updater.autoUpdate();
             }else{
             message.channel.send(`You do not have enough coins, You need ${boosterPrice* (users[authorID].boostersBought*3) - users[authorID].coins} more coins`)
         }
@@ -701,6 +727,7 @@ client.on("messageReactionAdd", (messageReaction, user)=>{
                 fs.writeFile('./users.json', JSON.stringify(users, null, 2), (err)=>{
                     if(err)console.log(err);
                 })
+                updater.autoUpdate();
             }else{
             message.channel.send(`You do not have enough coins, You need ${boosterPrice* (users[authorID].boostersBought*3) - users[authorID].coins} more coins`)
         }
@@ -725,6 +752,7 @@ client.on("messageReactionAdd", (messageReaction, user)=>{
                 fs.writeFile('./users.json', JSON.stringify(users, null, 2), (err)=>{
                     if(err)console.log(err);
                 })
+                updater.autoUpdate();
             }else{
             message.channel.send(`You do not have enough coins, You need ${boosterPrice* (users[authorID].boostersBought*3) - users[authorID].coins} more coins`)
         }
@@ -751,6 +779,7 @@ client.on("messageReactionAdd", (messageReaction, user)=>{
                 fs.writeFile('./users.json', JSON.stringify(users, null, 2), (err)=>{
                     if(err)console.log(err);
                 })
+                updater.autoUpdate();
             }else{
             message.channel.send(`You do not have enough coins, You need ${boosterPrice* (users[authorID].boostersBought*3) - users[authorID].coins} more coins`)
         }
@@ -778,6 +807,7 @@ client.on("messageReactionAdd", (messageReaction, user)=>{
                 fs.writeFile('./users.json', JSON.stringify(users, null, 2), (err)=>{
                     if(err)console.log(err);
                 })
+                updater.autoUpdate();
             }else{
             message.channel.send(`You do not have enough coins, You need ${boosterPrice* (users[authorID].boostersBought*3) - users[authorID].coins} more coins`)
         }
@@ -804,6 +834,7 @@ client.on("messageReactionAdd", (messageReaction, user)=>{
                 fs.writeFile('./users.json', JSON.stringify(users, null, 2), (err)=>{
                     if(err)console.log(err);
                 })
+                updater.autoUpdate();
             }else{
             message.channel.send(`You do not have enough coins, You need ${boosterPrice* (users[authorID].boostersBought*3) - users[authorID].coins} more coins`)
         }
@@ -834,6 +865,7 @@ client.on("messageReactionAdd", (messageReaction, user)=>{
                 fs.writeFile('./users.json', JSON.stringify(users, null, 2), (err)=>{
                     if(err)console.log(err);
                 })
+                updater.autoUpdate();
             }else{
             message.channel.send(`You do not have enough coins, You need ${boosterPrice - users[authorID].coins} more coins`)
         }
@@ -855,6 +887,7 @@ client.on("messageReactionAdd", (messageReaction, user)=>{
                 fs.writeFile('./users.json', JSON.stringify(users, null, 2), (err)=>{
                     if(err)console.log(err);
                 })
+                updater.autoUpdate();
             }else{
             message.channel.send(`You do not have enough coins, You need ${boosterPrice - users[authorID].coins} more coins`)
         }
@@ -876,6 +909,7 @@ client.on("messageReactionAdd", (messageReaction, user)=>{
                 fs.writeFile('./users.json', JSON.stringify(users, null, 2), (err)=>{
                     if(err)console.log(err);
                 })
+                updater.autoUpdate();
             }else{
             message.channel.send(`You do not have enough coins, You need ${boosterPrice - users[authorID].coins} more coins`)
         }
@@ -897,6 +931,7 @@ client.on("messageReactionAdd", (messageReaction, user)=>{
                 fs.writeFile('./users.json', JSON.stringify(users, null, 2), (err)=>{
                     if(err)console.log(err);
                 })
+                updater.autoUpdate();
             }else{
             message.channel.send(`You do not have enough coins, You need ${boosterPrice - users[authorID].coins} more coins`)
         }
@@ -918,6 +953,7 @@ client.on("messageReactionAdd", (messageReaction, user)=>{
                 fs.writeFile('./users.json', JSON.stringify(users, null, 2), (err)=>{
                     if(err)console.log(err);
                 })
+                updater.autoUpdate();
             }else{
             message.channel.send(`You do not have enough coins, You need ${boosterPrice - users[authorID].coins} more coins`)
         }
@@ -939,6 +975,7 @@ client.on("messageReactionAdd", (messageReaction, user)=>{
                 fs.writeFile('./users.json', JSON.stringify(users, null, 2), (err)=>{
                     if(err)console.log(err);
                 })
+                updater.autoUpdate();
             }else{
             message.channel.send(`You do not have enough coins, You need ${boosterPrice - users[authorID].coins} more coins`)
         }
@@ -961,6 +998,7 @@ client.on("messageReactionAdd", (messageReaction, user)=>{
                 fs.writeFile('./users.json', JSON.stringify(users, null, 2), (err)=>{
                     if(err)console.log(err);
                 })
+                updater.autoUpdate();
             }else{
             message.channel.send(`You do not have enough coins, You need ${boosterPrice - users[authorID].coins} more coins`)
         }
@@ -982,6 +1020,7 @@ client.on("messageReactionAdd", (messageReaction, user)=>{
                 fs.writeFile('./users.json', JSON.stringify(users, null, 2), (err)=>{
                     if(err)console.log(err);
                 })
+                updater.autoUpdate();
             }else{
             message.channel.send(`You do not have enough coins, You need ${boosterPrice - users[authorID].coins} more coins`)
         }
@@ -1003,6 +1042,7 @@ client.on("messageReactionAdd", (messageReaction, user)=>{
                 fs.writeFile('./users.json', JSON.stringify(users, null, 2), (err)=>{
                     if(err)console.log(err);
                 })
+                updater.autoUpdate();
             }else{
             message.channel.send(`You do not have enough coins, You need ${boosterPrice - users[authorID].coins} more coins`)
         }
@@ -1018,3 +1058,5 @@ client.once('ready', () => {
 
 //Last Name
 client.login(process.env.TOKEN);
+
+app.listen(process.env.PORT, ()=>true);
