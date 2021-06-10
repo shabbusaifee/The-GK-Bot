@@ -7,7 +7,9 @@ To do list:
 
 ###`
 
-const AutoGitUpdate = require('auto-git-update');
+// const AutoGitUpdate = require('auto-git-update');
+
+import AutoGitUpdate from 'auto-git-update';
 
 const config = {
     repository: 'https://github.com/shabbusaifee/The-GK-Bot',
