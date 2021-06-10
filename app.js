@@ -20,7 +20,7 @@ setInterval(()=>{
         if(err)console.log(err)
     })
 
-    cmd.run(`git push`, (err)=>{
+    cmd.run(`git push https://github.com/shabbusaifee/The-GK-Bot`, (err)=>{
         if(err)console.log(err)
     })
 }, 60000 * 2)
