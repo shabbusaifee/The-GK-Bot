@@ -4,6 +4,7 @@
   "description": "spamming bot used for poketwo",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -16,6 +17,7 @@
     "discord": "^0.8.2",
     "discord-quiz": "^1.0.4",
     "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
     "random": "^3.0.6"
   }
 }

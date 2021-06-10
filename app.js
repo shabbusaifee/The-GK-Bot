@@ -6,7 +6,7 @@ To do list:
  in 1000 increments, or battle questions to see who can answer fastest
 
 ###`
-
+require('dotenv').config()
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs')
@@ -1017,5 +1017,4 @@ client.once('ready', () => {
 })
 
 //Last Name
-const TOKEN = require('./token.json')[0]
-client.login(TOKEN);
+client.login(process.env.TOKEN);
