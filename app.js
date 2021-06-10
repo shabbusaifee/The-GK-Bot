@@ -1016,7 +1016,5 @@ client.once('ready', () => {
     console.log('The bot has started running')
 })
 
-let answerOfSometinghlkasfkla = "hi";
-
 //Last Name
 client.login(process.env.TOKEN);
